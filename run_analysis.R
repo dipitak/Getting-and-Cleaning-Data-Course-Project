@@ -173,4 +173,5 @@ setkey(dtM4, subject, activity, featDomain, featAcceleration, featInstrument, fe
 dtTidy <- dtM4[, list(count = .N, average = mean(value)), by=key(dtM4)]
 
 
+write.table(dtTidy,"tidyData.txt",row.name = FALSE)
 
